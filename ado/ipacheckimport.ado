@@ -48,7 +48,14 @@ program ipacheckimport, rclass
 	    	* display sheet name to be read
 			nois di `"`sheet'"'
 
-	    	* read the data from the input file
+			*Test if file exist and have been specified with correct file path
+			cap confirm file "`using'""
+			if _rc {
+				di as err "The file `using' was not found"
+				error _rc
+			}
+
+			* read the data from the input file
 	    	cap import excel using "`using'", sheet(`"`sheet'"') firstrow clear
 
 			* return error if unable to read sheet
