@@ -49,7 +49,7 @@ program ipacheckimport, rclass
 			nois di `"`sheet'"'
 
 			*Test if file exist and have been specified with correct file path
-			cap confirm file "`using'""
+			cap confirm file "`using'"
 			if _rc {
 				di as err "The file `using' was not found"
 				error _rc
