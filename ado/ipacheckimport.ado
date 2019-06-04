@@ -59,7 +59,11 @@ program ipacheckimport, rclass
 	    	cap import excel using "`using'", sheet(`"`sheet'"') firstrow clear
 
 			* return error if unable to read sheet
-			if _rc {
+			if _rc == 603 {
+				di as err "File `using' found but cannot be read. This could be casued by the Excel file already being open"
+				error _rc
+			}
+			else if _rc {
 				di as err "Input sheet `sheet' not found"
 				error 198
 			}
