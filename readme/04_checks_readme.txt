@@ -12,13 +12,13 @@ This is the main document where you will select which variables from your datase
 
 - hfc_replacements
 
-This is a blank document that should only be populated if you need to make corrections to your dataset before running the master_check do file. Typically, you should proceed by running the HFCs, reading the output, identifying what observations or variables have problematic values (e.g. a clearly erroneous value that was looka misentered, such as someone declaring age to be 118 instead of 18), communicating with the field team, and then applying any neessary corrections by adding a row to the replacements spreadsheet.
+This is a blank document that should only be populated if you need to make corrections to your dataset before running the master_check do file. Typically, you should proceed by running the HFCs, reading the output, identifying what observations or variables have problematic values (e.g. a clearly erroneous value that was looks incorrectly entered, such as someone declaring age to be 118 instead of 18), communicating with the field team, and then applying any necessary corrections by adding a row to the replacements spreadsheet.
 
 Once you run the checks, look to the 02_outputs folder to see what has been generated:
 
 - hfc_enumerators
 
-This is the eumerator dashboard, which contains a set of checks by enumerator to monitor performance.
+This is the enumerator dashboard, which contains a set of checks by enumerator to monitor performance.
 
 - hfc_output
 
